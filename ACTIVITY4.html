@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE 2 - Music Player</title>
+
+    <style>
+        :root{
+            --maroon-light:#c96b7a;
+            --maroon-accent:#a14b5a;
+            --maroon-soft:#f3d6da;
+            --maroon-card:#2d1f24;
+            --bg-color:#4d1c23;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:var(--bg-color);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        /* PAGE 2 */
+
+        #page2{
+            width:100%;
+            max-width:900px;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:40px;
+        }
+
+        .scroll-text{
+            width:100%;
+            overflow:hidden;
+            white-space:nowrap;
+            padding:16px 0;
+
+            background:
+            linear-gradient(
+                90deg,
+                var(--maroon-light),
+                var(--maroon-accent)
+            );
+
+            color:white;
+            font-weight:900;
+            font-size:24px;
+            text-transform:uppercase;
+            letter-spacing:2px;
+
+            animation:scrolling 20s linear infinite;
+        }
+
+        @keyframes scrolling{
+            0%{
+                transform:translateX(100%);
+            }
+
+            100%{
+                transform:translateX(-100%);
+            }
+        }
+
+        .album-art{
+            width:350px;
+            max-width:100%;
+            border-radius:25px;
+            border:5px solid white;
+
+            box-shadow:
+                0 0 25px rgba(164,75,86,0.3),
+                0 0 60px rgba(0,0,0,0.4);
+        }
+
+        .audio-box{
+            width:420px;
+            max-width:100%;
+
+            background:var(--maroon-card);
+            padding:30px;
+            border-radius:25px;
+            text-align:center;
+
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .soft2-title{
+            margin-bottom:18px;
+            color:var(--maroon-soft);
+            font-size:24px;
+        }
+
+        audio{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+
+        <div class="scroll-text">
+            It Will Rain • When I Was Your Man • All I Ask • Risk It All
+        </div>
+
+        <img 
+            src="bm.jpg"
+            alt="Bruno Mars Album Art"
+            class="album-art"
+        >
+
+        <div class="audio-box">
+
+            <h2 class="soft2-title">
+                Now Playing: It Will Rain
+            </h2>
+
+            <audio controls>
+                <source src="risk.mp3" type="audio/mpeg">
+
+                Your browser does not support the audio element.
+            </audio>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

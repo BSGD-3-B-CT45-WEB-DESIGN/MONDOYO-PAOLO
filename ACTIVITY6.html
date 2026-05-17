@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Screen</title>
+
+    <style>
+        :root{
+            --maroon-dark:#1d0b0d;
+            --maroon-light:#c96b7a;
+            --maroon-accent:#a14b5a;
+            --maroon-soft:#f3d6da;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:var(--maroon-dark);
+            min-height:100vh;
+            overflow:hidden;
+        }
+
+        /* LOGIN SCREEN */
+
+        #login-screen{
+            position:fixed;
+            inset:0;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            radial-gradient(
+                circle at top left,
+                rgba(164,75,86,0.2),
+                transparent 30%
+            ),
+
+            radial-gradient(
+                circle at bottom right,
+                rgba(110,42,49,0.3),
+                transparent 30%
+            ),
+
+            var(--maroon-dark);
+
+            z-index:9999;
+        }
+
+        #main-content{
+            display:none;
+        }
+
+        .login-box{
+            width:400px;
+            max-width:90%;
+
+            padding:45px;
+
+            background:rgba(61,20,24,0.95);
+
+            border-radius:25px;
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            text-align:center;
+
+            box-shadow:
+                0 0 25px rgba(164,75,86,0.25),
+                0 0 60px rgba(0,0,0,0.4);
+        }
+
+        .login-box h1{
+            color:var(--maroon-soft);
+            font-size:34px;
+            margin-bottom:10px;
+        }
+
+        .login-box p{
+            color:#e8d9dc;
+            margin-bottom:28px;
+        }
+
+        .login-box input{
+            width:100%;
+
+            padding:14px;
+            margin-bottom:16px;
+
+            border:none;
+            border-radius:14px;
+
+            background:#240b0d;
+            color:white;
+
+            font-size:15px;
+            outline:none;
+        }
+
+        .login-box input:focus{
+            border:1px solid var(--maroon-accent);
+        }
+
+        .login-box button{
+            width:100%;
+
+            padding:14px;
+
+            border:none;
+            border-radius:14px;
+
+            background:
+            linear-gradient(
+                90deg,
+                var(--maroon-light),
+                var(--maroon-accent)
+            );
+
+            color:white;
+
+            font-size:16px;
+            font-weight:800;
+
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .login-box button:hover{
+            transform:scale(1.03);
+        }
+
+        .error-msg{
+            display:none;
+            color:#ff8f8f;
+            margin-bottom:14px;
+            font-size:13px;
+        }
+
+        /* DEMO MAIN CONTENT */
+
+        #main-content{
+            color:white;
+            display:none;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            font-size:32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+    <div id="login-screen">
+
+        <div class="login-box">
+
+            <h1>You're going Deeper</h1>
+
+            <p>Let's dive in.</p>
+
+            <div class="error-msg" id="error-msg">
+                Don't leave me hanging! Fill the fields.
+            </div>
+
+            <input 
+                type="text" 
+                id="username" 
+                placeholder="User"
+            >
+
+            <input 
+                type="password" 
+                id="password" 
+                placeholder="Password"
+            >
+
+            <button onclick="doLogin()">
+                Proceed
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+        Welcome!
+    </div>
+
+    <script>
+        function doLogin(){
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const errorMsg = document.getElementById("error-msg");
+
+            if(username === "" || password === ""){
+
+                errorMsg.style.display = "block";
+
+            } else {
+
+                errorMsg.style.display = "none";
+
+                document.getElementById("login-screen").style.display = "none";
+
+                document.getElementById("main-content").style.display = "flex";
+            }
+        }
+    </script>
+
+</body>
+</html>

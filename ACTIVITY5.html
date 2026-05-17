@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE 1 - Hero Section</title>
+
+    <style>
+        :root{
+            --maroon-accent:#a14b5a;
+            --bg-color:#4d1c23;
+            --text-light:#ffffff;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:var(--bg-color);
+            color:var(--text-light);
+
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            padding:40px;
+        }
+
+        /* HERO PAGE */
+
+        #page1{
+            width:100%;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .hero-container{
+            max-width:1100px;
+            width:100%;
+        }
+
+        .hero-sticker-box{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+
+            background:
+            linear-gradient(
+                145deg,
+                #42151a,
+                #240b0d
+            );
+
+            padding:60px;
+            border-radius:30px;
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            box-shadow:
+                0 0 30px rgba(164,75,86,0.25),
+                0 0 60px rgba(0,0,0,0.3);
+        }
+
+        .hero-title{
+            font-size:clamp(42px, 7vw, 80px);
+            line-height:1;
+            font-weight:900;
+        }
+
+        .hero-title span{
+            color:var(--maroon-accent);
+        }
+
+        .hero-sub{
+            display:flex;
+            align-items:center;
+
+            line-height:1.9;
+            font-size:19px;
+            color:#f2e8ea;
+
+            border-left:5px solid var(--maroon-accent);
+            padding-left:25px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width:768px){
+
+            .hero-sticker-box{
+                grid-template-columns:1fr;
+                padding:40px 30px;
+            }
+
+            .hero-sub{
+                font-size:16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 1 -->
+    <section class="page" id="page1">
+
+        <div class="hero-container">
+
+            <div class="hero-sticker-box">
+
+                <!-- HERO TITLE -->
+                <div class="hero-text">
+
+                    <h1 class="hero-title">
+                        I'd risk it all for <span>you</span>
+                    </h1>
+
+                </div>
+
+                <!-- HERO DESCRIPTION -->
+                <div class="hero-description">
+
+                    <p class="hero-sub">
+                        A powerful expression of deep love and devotion.
+                        It means someone is willing to face uncertainty,
+                        sacrifice comfort, and take chances just to protect,
+                        support, or stay beside the person they truly care about.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

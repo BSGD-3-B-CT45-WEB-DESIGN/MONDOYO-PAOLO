@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACT 2 - CSS BASIC</title>
+
+    <style>
+        :root{
+            --maroon-soft:#d8b8bd;
+            --maroon-accent:#a14b5a;
+            --bg-color:#4d1c23;
+
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:var(--bg-color);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        /* PAGE 4 */
+
+        #page4{
+            width:100%;
+            max-width:1000px;
+            background:var(--card-bg);
+            padding:50px;
+            border-radius:16px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .act-header{
+            margin-bottom:40px;
+        }
+
+        .act-header h2{
+            color:var(--maroon-soft);
+            font-size:26px;
+            letter-spacing:2px;
+            text-align:center;
+        }
+
+        .btn-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+            gap:18px;
+            width:100%;
+            max-width:900px;
+        }
+
+        /* BUTTONS */
+
+        .uberbutton{
+            background:black;
+            color:white;
+            padding:15px 30px;
+            border:1px solid #333;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .amazonbutton{
+            background:#ffd814;
+            color:#000;
+            padding:15px 30px;
+            border:none;
+            border-radius:50px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .githubbutton{
+            background:#2ea44f;
+            color:white;
+            padding:15px 30px;
+            border:none;
+            border-radius:8px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .bootstrapbutton{
+            background:#7952b3;
+            color:white;
+            padding:15px 30px;
+            border:none;
+            border-radius:5px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .downloadbutton{
+            background:transparent;
+            color:#f3f0ff;
+            padding:15px 30px;
+            border:1px solid #6c757d;
+            border-radius:5px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .linkedinbutton{
+            background:#0a66c2;
+            color:white;
+            padding:15px 30px;
+            border:none;
+            border-radius:50px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .savebutton{
+            background:transparent;
+            color:#d8b8bd;
+            padding:15px 30px;
+            border:1px solid var(--maroon-accent);
+            border-radius:50px;
+            font-weight:bold;
+            cursor:pointer;
+            font-size:16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+
+        <div class="act-header">
+            <h2>ACT 2 - CSS BASIC</h2>
+        </div>
+
+        <div class="btn-grid">
+
+            <button class="uberbutton">
+                Request now
+            </button>
+
+            <button class="amazonbutton">
+                Add to cart
+            </button>
+
+            <button class="githubbutton">
+                Sign up
+            </button>
+
+            <button class="bootstrapbutton">
+                Get started
+            </button>
+
+            <button class="downloadbutton">
+                Download
+            </button>
+
+            <button class="linkedinbutton">
+                Apply now
+            </button>
+
+            <button class="savebutton">
+                Save
+            </button>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
